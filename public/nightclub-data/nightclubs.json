@@ -1,0 +1,284 @@
+[
+  {
+    "id": "11-11-club",
+    "name": "11_11 CLUB",
+    "folder": "11_11 CLUB",
+    "genres": ["EDM", "House", "Commercial"],
+    "images": [
+      "/nightclub-data/11_11%20CLUB/IMG_4332.jpg",
+      "/nightclub-data/11_11%20CLUB/IMG_4333.jpg",
+      "/nightclub-data/11_11%20CLUB/IMG_4334.jpg",
+      "/nightclub-data/11_11%20CLUB/IMG_4335.jpg",
+      "/nightclub-data/11_11%20CLUB/IMG_4336.jpg"
+    ]
+  },
+  {
+    "id": "afterlow",
+    "name": "AFTERLOW",
+    "folder": "AFTERLOW",
+    "genres": ["Deep House", "Techno", "House"],
+    "images": [
+      "/nightclub-data/AFTERLOW/IMG_3949%202.PNG",
+      "/nightclub-data/AFTERLOW/IMG_3949.PNG",
+      "/nightclub-data/AFTERLOW/IMG_3950%202.PNG",
+      "/nightclub-data/AFTERLOW/IMG_3950.PNG",
+      "/nightclub-data/AFTERLOW/IMG_3951%202.PNG",
+      "/nightclub-data/AFTERLOW/IMG_3951.PNG",
+      "/nightclub-data/AFTERLOW/IMG_3952%202.PNG",
+      "/nightclub-data/AFTERLOW/IMG_3952.PNG",
+      "/nightclub-data/AFTERLOW/IMG_3953%202.PNG",
+      "/nightclub-data/AFTERLOW/IMG_3953.PNG",
+      "/nightclub-data/AFTERLOW/IMG_3954%202.PNG",
+      "/nightclub-data/AFTERLOW/IMG_3954.PNG"
+    ]
+  },
+  {
+    "id": "atmos-club",
+    "name": "ATMOS CLUB",
+    "folder": "ATMOS CLUB ",
+    "genres": ["EDM", "House", "Commercial", "Top 40"],
+    "images": [
+      "/nightclub-data/ATMOS%20CLUB%20/IMG_4477%202.JPG",
+      "/nightclub-data/ATMOS%20CLUB%20/IMG_4478%202.JPG",
+      "/nightclub-data/ATMOS%20CLUB%20/IMG_4479%202.JPG",
+      "/nightclub-data/ATMOS%20CLUB%20/IMG_4480%202.JPG",
+      "/nightclub-data/ATMOS%20CLUB%20/IMG_4481%202.JPG",
+      "/nightclub-data/ATMOS%20CLUB%20/IMG_4482%202.JPG",
+      "/nightclub-data/ATMOS%20CLUB%20/IMG_4483%202.JPG",
+      "/nightclub-data/ATMOS%20CLUB%20/IMG_4484%202.JPG",
+      "/nightclub-data/ATMOS%20CLUB%20/IMG_4485%202.JPG",
+      "/nightclub-data/ATMOS%20CLUB%20/IMG_4486%202.jpg",
+      "/nightclub-data/ATMOS%20CLUB%20/IMG_4486.jpg",
+      "/nightclub-data/ATMOS%20CLUB%20/IMG_6989%202.JPG",
+      "/nightclub-data/ATMOS%20CLUB%20/JPEG%20image-4543-A96D-A4-3.jpeg",
+      "/nightclub-data/ATMOS%20CLUB%20/JPEG%20image-4543-A96D-A4-4.jpeg",
+      "/nightclub-data/ATMOS%20CLUB%20/JPEG%20image-4543-A96D-A4-5.jpeg",
+      "/nightclub-data/ATMOS%20CLUB%20/JPEG%20image-485B-9466-7C-0.jpeg",
+      "/nightclub-data/ATMOS%20CLUB%20/JPEG%20image-485B-9466-7C-1.jpeg",
+      "/nightclub-data/ATMOS%20CLUB%20/JPEG%20image-485B-9466-7C-2.jpeg"
+    ]
+  },
+  {
+    "id": "bam",
+    "name": "BAM",
+    "folder": "BAM",
+    "genres": ["Hip Hop", "R&B", "Trap"],
+    "images": [
+      "/nightclub-data/BAM/IMG_2798.PNG",
+      "/nightclub-data/BAM/IMG_2799.PNG",
+      "/nightclub-data/BAM/IMG_2801.PNG",
+      "/nightclub-data/BAM/IMG_2803.PNG",
+      "/nightclub-data/BAM/IMG_2804.PNG",
+      "/nightclub-data/BAM/IMG_2805.PNG"
+    ]
+  },
+  {
+    "id": "bodega",
+    "name": "BODEGA",
+    "folder": "BODEGA",
+    "genres": ["Latin", "Reggaeton", "Hip Hop"],
+    "images": [
+      "/nightclub-data/BODEGA/IMG_2781.PNG",
+      "/nightclub-data/BODEGA/IMG_2782.PNG",
+      "/nightclub-data/BODEGA/IMG_2784.PNG",
+      "/nightclub-data/BODEGA/IMG_2785.PNG",
+      "/nightclub-data/BODEGA/IMG_2786.PNG",
+      "/nightclub-data/BODEGA/IMG_2787.PNG",
+      "/nightclub-data/BODEGA/IMG_2788.PNG",
+      "/nightclub-data/BODEGA/IMG_2790.PNG"
+    ]
+  },
+  {
+    "id": "boujee-saigon",
+    "name": "BOUJEE SAIGON",
+    "folder": "BOUJEE SAIGON",
+    "genres": ["Commercial", "Pop", "Top 40"],
+    "images": [
+      "/nightclub-data/BOUJEE%20SAIGON/IMG_3936.PNG",
+      "/nightclub-data/BOUJEE%20SAIGON/IMG_3937.PNG",
+      "/nightclub-data/BOUJEE%20SAIGON/IMG_3939.PNG",
+      "/nightclub-data/BOUJEE%20SAIGON/IMG_3940.PNG",
+      "/nightclub-data/BOUJEE%20SAIGON/IMG_3941.PNG"
+    ]
+  },
+  {
+    "id": "broma",
+    "name": "BROMA",
+    "folder": "BROMA",
+    "genres": ["House", "Deep House", "Commercial"],
+    "images": [
+      "/nightclub-data/BROMA/IMG_3955.PNG",
+      "/nightclub-data/BROMA/IMG_3956.PNG",
+      "/nightclub-data/BROMA/IMG_3957.PNG",
+      "/nightclub-data/BROMA/IMG_3958.PNG",
+      "/nightclub-data/BROMA/IMG_3959.PNG"
+    ]
+  },
+  {
+    "id": "canalis-club",
+    "name": "CANALIS CLUB",
+    "folder": "CANALIS CLUB",
+    "genres": ["EDM", "Commercial", "Top 40"],
+    "images": [
+      "/nightclub-data/CANALIS%20CLUB/IMG_4339.jpg",
+      "/nightclub-data/CANALIS%20CLUB/IMG_4340.jpg",
+      "/nightclub-data/CANALIS%20CLUB/IMG_4341%202.jpg",
+      "/nightclub-data/CANALIS%20CLUB/IMG_4342%202.jpg",
+      "/nightclub-data/CANALIS%20CLUB/IMG_4343%202.jpg"
+    ]
+  },
+  {
+    "id": "faham-lounge",
+    "name": "FAHAM LOUNGE",
+    "folder": "FAHAM LOUNGE ",
+    "genres": ["R&B", "Hip Hop", "Pop"],
+    "images": [
+      "/nightclub-data/FAHAM%20LOUNGE%20/IMG_DDC0E8D64455-1.jpeg",
+      "/nightclub-data/FAHAM%20LOUNGE%20/IMG_DDC0E8D64455-2.jpeg",
+      "/nightclub-data/FAHAM%20LOUNGE%20/IMG_DDC0E8D64455-3.jpeg",
+      "/nightclub-data/FAHAM%20LOUNGE%20/JPEG%20image-4F66-A5EE-F7-0.jpeg",
+      "/nightclub-data/FAHAM%20LOUNGE%20/JPEG%20image-4F66-A5EE-F7-1.jpeg",
+      "/nightclub-data/FAHAM%20LOUNGE%20/JPEG%20image-4F66-A5EE-F7-2.jpeg"
+    ]
+  },
+  {
+    "id": "indigo",
+    "name": "INDIGO",
+    "folder": "INDIGO",
+    "genres": ["Deep House", "Techno", "House"],
+    "images": [
+      "/nightclub-data/INDIGO/IMG_3942.PNG",
+      "/nightclub-data/INDIGO/IMG_3943.PNG",
+      "/nightclub-data/INDIGO/IMG_3944.PNG",
+      "/nightclub-data/INDIGO/IMG_3945.PNG",
+      "/nightclub-data/INDIGO/IMG_3946.PNG",
+      "/nightclub-data/INDIGO/IMG_3947.PNG",
+      "/nightclub-data/INDIGO/IMG_3948.PNG"
+    ]
+  },
+  {
+    "id": "khu-13",
+    "name": "KHU 13",
+    "folder": "KHU 13",
+    "genres": ["Hip Hop", "Trap", "R&B"],
+    "images": [
+      "/nightclub-data/KHU%2013/IMG_4348%202.jpg",
+      "/nightclub-data/KHU%2013/IMG_4349%202.jpg",
+      "/nightclub-data/KHU%2013/IMG_4350%203.jpg",
+      "/nightclub-data/KHU%2013/IMG_4351%203.jpg"
+    ]
+  },
+  {
+    "id": "loco-complex",
+    "name": "LOCO COMPLEX",
+    "folder": "LOCO COMPLEX",
+    "genres": ["EDM", "Commercial", "Top 40", "House"],
+    "images": [
+      "/nightclub-data/LOCO%20COMPLEX/IMG_4495.JPG",
+      "/nightclub-data/LOCO%20COMPLEX/IMG_4496.JPG",
+      "/nightclub-data/LOCO%20COMPLEX/IMG_4497.JPG",
+      "/nightclub-data/LOCO%20COMPLEX/IMG_4498.JPG",
+      "/nightclub-data/LOCO%20COMPLEX/IMG_4499.JPG"
+    ]
+  },
+  {
+    "id": "lolla",
+    "name": "LOLLA",
+    "folder": "LOLLA ",
+    "genres": ["K-Pop", "Pop", "Commercial"],
+    "images": [
+      "/nightclub-data/LOLLA%20/IMG_5822.JPG",
+      "/nightclub-data/LOLLA%20/IMG_5823.JPG",
+      "/nightclub-data/LOLLA%20/IMG_5824.JPG",
+      "/nightclub-data/LOLLA%20/IMG_5825.JPG"
+    ]
+  },
+  {
+    "id": "lush-saigon",
+    "name": "LUSH SAIGON",
+    "folder": "LUSH SAIGON",
+    "genres": ["House", "Deep House", "Commercial"],
+    "images": [
+      "/nightclub-data/LUSH%20SAIGON/IMG_4352%203.jpg",
+      "/nightclub-data/LUSH%20SAIGON/IMG_4353%203.jpg",
+      "/nightclub-data/LUSH%20SAIGON/IMG_4354.jpg",
+      "/nightclub-data/LUSH%20SAIGON/IMG_4355.jpg"
+    ]
+  },
+  {
+    "id": "medium",
+    "name": "MEDIUM",
+    "folder": "MEDIUM ",
+    "genres": ["Techno", "House", "Deep House"],
+    "images": [
+      "/nightclub-data/MEDIUM%20/IMG_4376.jpg",
+      "/nightclub-data/MEDIUM%20/IMG_4377%202.jpg",
+      "/nightclub-data/MEDIUM%20/IMG_4378%202.jpg"
+    ]
+  },
+  {
+    "id": "merley-isg",
+    "name": "MERLEY ISG",
+    "folder": "MERLEY ISG ",
+    "genres": ["Commercial", "Pop", "Top 40"],
+    "images": [
+      "/nightclub-data/MERLEY%20ISG%20/IMG_4383%202.jpg",
+      "/nightclub-data/MERLEY%20ISG%20/IMG_4384%202.jpg",
+      "/nightclub-data/MERLEY%20ISG%20/IMG_4385%202.jpg",
+      "/nightclub-data/MERLEY%20ISG%20/IMG_4386%202.jpg"
+    ]
+  },
+  {
+    "id": "mizuwari",
+    "name": "MIZUWARI",
+    "folder": "MIZUWARI",
+    "genres": ["House", "Deep House", "Commercial"],
+    "images": [
+      "/nightclub-data/MIZUWARI/IMG_4394%202.jpg",
+      "/nightclub-data/MIZUWARI/IMG_4395%202.jpg",
+      "/nightclub-data/MIZUWARI/IMG_4396%202.jpg",
+      "/nightclub-data/MIZUWARI/IMG_4397%202.JPG"
+    ]
+  },
+  {
+    "id": "neightborhood",
+    "name": "NEIGHTBORHOOD",
+    "folder": "NEIGHTBORHOOD",
+    "genres": ["Hip Hop", "R&B", "Trap"],
+    "images": [
+      "/nightclub-data/NEIGHTBORHOOD/IMG_4356%204.jpg",
+      "/nightclub-data/NEIGHTBORHOOD/IMG_4357%204.jpg",
+      "/nightclub-data/NEIGHTBORHOOD/IMG_4358%204.jpg",
+      "/nightclub-data/NEIGHTBORHOOD/IMG_4359%204.jpg"
+    ]
+  },
+  {
+    "id": "qui",
+    "name": "QUI",
+    "folder": "QUI",
+    "genres": ["Deep House", "Techno", "House"],
+    "images": [
+      "/nightclub-data/QUI/IMG_4379%202.jpg",
+      "/nightclub-data/QUI/IMG_4380%202.jpg",
+      "/nightclub-data/QUI/IMG_4381%202.jpg",
+      "/nightclub-data/QUI/IMG_4382%202.jpg"
+    ]
+  },
+  {
+    "id": "zion-sky-lounge",
+    "name": "ZION SKY LOUNGE",
+    "folder": "ZION SKY LOUNGE",
+    "genres": ["Commercial", "Pop", "Top 40", "House"],
+    "images": [
+      "/nightclub-data/ZION%20SKY%20LOUNGE/IMG_1743.JPG",
+      "/nightclub-data/ZION%20SKY%20LOUNGE/IMG_1746.JPG",
+      "/nightclub-data/ZION%20SKY%20LOUNGE/IMG_4468.JPG",
+      "/nightclub-data/ZION%20SKY%20LOUNGE/IMG_4469.JPG",
+      "/nightclub-data/ZION%20SKY%20LOUNGE/IMG_4470.JPG",
+      "/nightclub-data/ZION%20SKY%20LOUNGE/IMG_4472.JPG",
+      "/nightclub-data/ZION%20SKY%20LOUNGE/IMG_4474.JPG",
+      "/nightclub-data/ZION%20SKY%20LOUNGE/IMG_4475.JPG",
+      "/nightclub-data/ZION%20SKY%20LOUNGE/IMG_4476.JPG"
+    ]
+  }
+]
