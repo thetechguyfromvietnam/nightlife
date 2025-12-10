@@ -52,6 +52,10 @@
   contain: layout style;
   text-rendering: optimizeSpeed;
   gap: 1.5rem;
+  /* Smooth scroll optimization */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .brand {
@@ -333,6 +337,10 @@
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
+  /* Smooth scroll optimization */
+  will-change: contents;
+  transform: translateZ(0);
+  contain: layout style paint;
 }
 
 .hero {
@@ -457,6 +465,109 @@
   font-weight: 700;
   flex-shrink: 0;
   box-shadow: 0 0 12px rgba(6, 214, 160, 0.2);
+}
+
+.booking-benefits {
+  background: linear-gradient(135deg, rgba(6, 214, 160, 0.1), rgba(108, 92, 231, 0.15)),
+    rgba(19, 20, 32, 0.95);
+  border-radius: 26px;
+  border: 2px solid rgba(6, 214, 160, 0.3);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 16px 40px rgba(6, 214, 160, 0.2);
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+.booking-benefits::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(6, 214, 160, 0.1), transparent 70%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+}
+
+.booking-benefits__header {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.booking-benefits__header h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(120deg, #06d6a0, #6c5ce7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.booking-benefits__promo {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  background: rgba(6, 214, 160, 0.1);
+  border-radius: 999px;
+  display: inline-block;
+  border: 1px solid rgba(6, 214, 160, 0.3);
+}
+
+.booking-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+  position: relative;
+  z-index: 1;
+}
+
+.booking-benefits__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: rgba(12, 12, 24, 0.6);
+  border-radius: 12px;
+  border: 1px solid rgba(6, 214, 160, 0.2);
+  transition: all 0.3s ease;
+}
+
+.booking-benefits__item:hover {
+  background: rgba(6, 214, 160, 0.1);
+  border-color: rgba(6, 214, 160, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(6, 214, 160, 0.2);
+}
+
+.booking-benefits__icon {
+  font-size: 1.8rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.booking-benefits__text {
+  color: var(--color-text);
+  font-size: 0.95rem;
+  font-weight: 500;
+  flex: 1;
 }
 
 .booking-card {
@@ -636,6 +747,151 @@
   box-shadow: 0 0 20px rgba(6, 214, 160, 0.55);
 }
 
+.booking-card__itinerary-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(108, 92, 231, 0.15);
+}
+
+.booking-card__itinerary-label {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin: 0;
+  font-weight: 600;
+}
+
+.booking-card__itinerary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.booking-card__itinerary-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: rgba(16, 17, 29, 0.6);
+  border-radius: 16px;
+  border: 1px solid rgba(108, 92, 231, 0.2);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.booking-card__itinerary-item:hover {
+  border-color: rgba(108, 92, 231, 0.4);
+  background: rgba(16, 17, 29, 0.75);
+}
+
+.booking-card__itinerary-item-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+}
+
+.booking-card__itinerary-item-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(120deg, rgba(108, 92, 231, 0.3), rgba(255, 107, 205, 0.25));
+  border: 1px solid rgba(108, 92, 231, 0.4);
+  display: grid;
+  place-items: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-text);
+  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(108, 92, 231, 0.3);
+}
+
+.booking-card__itinerary-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.booking-card__itinerary-item-info h4 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.booking-card__itinerary-item-vibe {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.booking-card__itinerary-item-time {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 120px;
+}
+
+.booking-card__itinerary-time-label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin: 0;
+  font-weight: 500;
+}
+
+.booking-card__itinerary-time-input {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(112, 112, 140, 0.35);
+  background: rgba(12, 12, 24, 0.85);
+  color: var(--color-text);
+  padding: 0.6rem 0.75rem;
+  transition: all 0.25s ease;
+  font-family: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px rgba(108, 92, 231, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.booking-card__itinerary-time-input:hover {
+  border-color: rgba(108, 92, 231, 0.5);
+  box-shadow: inset 0 0 0 1px rgba(108, 92, 231, 0.2), 0 0 12px rgba(108, 92, 231, 0.15);
+}
+
+.booking-card__itinerary-time-input:focus {
+  outline: none;
+  border-color: rgba(108, 92, 231, 0.85);
+  box-shadow: inset 0 0 0 1px rgba(108, 92, 231, 0.3), 0 0 18px rgba(108, 92, 231, 0.35);
+  background: rgba(12, 12, 24, 0.95);
+}
+
+.booking-card__itinerary-remove {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 107, 205, 0.3);
+  background: rgba(255, 107, 205, 0.1);
+  color: rgba(255, 107, 205, 0.9);
+  font-size: 1.5rem;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+.booking-card__itinerary-remove:hover {
+  background: rgba(255, 107, 205, 0.2);
+  border-color: rgba(255, 107, 205, 0.5);
+  transform: rotate(90deg);
+}
+
 .booking-card__bars {
   display: flex;
   flex-direction: column;
@@ -664,6 +920,11 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  /* Performance optimization */
+  will-change: transform;
+  transform: translateZ(0);
+  contain: layout style paint;
+  backface-visibility: hidden;
 }
 
 .booking-card__bar-card:hover {
@@ -690,6 +951,10 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  /* Image optimization */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .booking-card__bar-card:hover .booking-card__bar-card-image img {
@@ -2125,21 +2390,27 @@ input[type='tel']::placeholder {
   font-size: 0.85rem;
 }
 
-.success-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(6, 8, 18, 0.95);
-  backdrop-filter: blur(20px);
-  z-index: 1000;
-  display: grid;
-  place-items: center;
-  padding: 2rem;
-  overflow-y: auto;
+.success-section {
+  width: 100%;
+  padding: 2rem 0;
+  animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .success-page {
   width: 100%;
   max-width: 600px;
+  margin: 0 auto;
   background: radial-gradient(circle at top, rgba(108, 92, 231, 0.18), transparent 65%),
     rgba(19, 20, 32, 0.95);
   border-radius: 28px;
@@ -2525,6 +2796,32 @@ input[type='tel']::placeholder {
     margin-top: 0.25rem;
   }
 
+  .booking-benefits {
+    padding: 1.75rem 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .booking-benefits__header h3 {
+    font-size: 1.5rem;
+  }
+
+  .booking-benefits__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .booking-benefits__item {
+    padding: 0.875rem 1rem;
+  }
+
+  .booking-benefits__icon {
+    font-size: 1.5rem;
+  }
+
+  .booking-benefits__text {
+    font-size: 0.875rem;
+  }
+
   .booking-card__music-chips {
     gap: 0.5rem;
   }
@@ -2568,8 +2865,8 @@ input[type='tel']::placeholder {
     height: 50px;
   }
 
-  .success-overlay {
-    padding: 1rem;
+  .success-section {
+    padding: 1.5rem 0;
   }
 
   .success-page {
@@ -2616,6 +2913,26 @@ input[type='tel']::placeholder {
     width: 100%;
   }
 
+  .booking-card__itinerary-item {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .booking-card__itinerary-item-content {
+    width: 100%;
+  }
+
+  .booking-card__itinerary-item-time {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .booking-card__itinerary-remove {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
   .music-section__grid {
     grid-template-columns: 1fr;
   }
@@ -2635,6 +2952,21 @@ input[type='tel']::placeholder {
   flex-direction: column;
   gap: 3rem;
   animation: fadeInUp 0.5s ease;
+  /* Smooth scroll optimization */
+  will-change: contents;
+  contain: layout style;
+  transform: translateZ(0);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .page-header {
@@ -2661,6 +2993,10 @@ input[type='tel']::placeholder {
 
 .page-content {
   width: 100%;
+  /* Smooth scroll optimization */
+  will-change: contents;
+  contain: layout;
+  transform: translateZ(0);
 }
 
 /* Bars & Clubs Page */
@@ -2668,6 +3004,10 @@ input[type='tel']::placeholder {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 2rem;
+  /* Smooth scrolling optimization */
+  will-change: contents;
+  contain: layout;
+  transform: translateZ(0);
 }
 
 .venue-card-page {
@@ -2679,6 +3019,11 @@ input[type='tel']::placeholder {
   box-shadow: 0 18px 60px rgba(5, 8, 26, 0.6);
   backdrop-filter: blur(18px);
   transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+  /* Performance optimization */
+  will-change: transform;
+  transform: translateZ(0);
+  contain: layout style paint;
+  backface-visibility: hidden;
 }
 
 .venue-card-page:hover {
@@ -2703,6 +3048,11 @@ input[type='tel']::placeholder {
   height: 100%;
   object-fit: cover;
   display: block;
+  /* Image rendering optimization */
+  will-change: opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .venue-card-page__slider-nav {

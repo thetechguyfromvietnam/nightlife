@@ -31,6 +31,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -40,6 +45,12 @@ body {
     linear-gradient(180deg, rgba(6, 8, 18, 0.95), #030308);
   overflow-x: hidden;
   color: var(--color-text);
+  /* Smooth scrolling optimization */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  transform: translateZ(0);
+  will-change: scroll-position;
 }
 
 body::before {
@@ -69,6 +80,12 @@ a {
 img {
   max-width: 100%;
   display: block;
+  /* Image optimization for smooth scrolling */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  will-change: auto;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 button,
@@ -76,4 +93,44 @@ input,
 select {
   font: inherit;
   color: inherit;
+}
+
+/* Smooth scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(12, 12, 24, 0.5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(108, 92, 231, 0.6), rgba(255, 107, 205, 0.5));
+  border-radius: 10px;
+  border: 2px solid rgba(12, 12, 24, 0.5);
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(108, 92, 231, 0.8), rgba(255, 107, 205, 0.7));
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(108, 92, 231, 0.6) rgba(12, 12, 24, 0.5);
+}
+
+/* Smooth scrolling for all scrollable elements */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Optimize scrolling performance */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }

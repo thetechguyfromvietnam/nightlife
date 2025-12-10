@@ -9,18 +9,18 @@ const MUSIC_FILTERS = [
   { value: 'EDM', label: { en: 'EDM', vi: 'EDM' } },
   { value: 'House', label: { en: 'House', vi: 'House' } },
   { value: 'Deep House', label: { en: 'Deep House', vi: 'Deep House' } },
+  { value: 'Afro House', label: { en: 'Afro House', vi: 'Afro House' } },
   { value: 'Techno', label: { en: 'Techno', vi: 'Techno' } },
+  { value: 'Melodic Techno', label: { en: 'Melodic Techno', vi: 'Melodic Techno' } },
+  { value: 'Trance', label: { en: 'Trance', vi: 'Trance' } },
+  { value: 'Hardstyle', label: { en: 'Hardstyle', vi: 'Hardstyle' } },
   { value: 'Hip Hop', label: { en: 'Hip Hop', vi: 'Hip Hop' } },
+  { value: 'Rap', label: { en: 'Rap', vi: 'Rap' } },
   { value: 'R&B', label: { en: 'R&B', vi: 'R&B' } },
-  { value: 'Pop', label: { en: 'Pop', vi: 'Pop' } },
-  { value: 'K-Pop', label: { en: 'K-Pop', vi: 'K-Pop' } },
-  { value: 'Latin', label: { en: 'Latin', vi: 'Latin' } },
-  { value: 'Reggaeton', label: { en: 'Reggaeton', vi: 'Reggaeton' } },
-  { value: 'Afrobeats', label: { en: 'Afrobeats', vi: 'Afrobeats' } },
   { value: 'Trap', label: { en: 'Trap', vi: 'Trap' } },
-  { value: 'Bass', label: { en: 'Bass', vi: 'Bass' } },
+  { value: 'Pop', label: { en: 'Pop', vi: 'Pop' } },
+  { value: 'VInahouse', label: { en: 'VInahouse', vi: 'VInahouse' } },
   { value: 'Commercial', label: { en: 'Commercial', vi: 'Commercial' } },
-  { value: 'Top 40', label: { en: 'Top 40', vi: 'Top 40' } },
 ]
 
 const CITY_OPTIONS = [
@@ -45,15 +45,22 @@ const TEXT = {
       titleLine2: 'with music-led safe arrivals.',
       lead:
         'Discover vetted venues across Ho Chi Minh City with Vietnamese-led concierge teams, multilingual hosts, and trusted transport designed for visiting travelers.',
-      stats: [
-        { value: '15+', label: 'Saigon partner venues live' },
-        { value: '98%', label: 'Verified traveler safety score' },
-        { value: '2 cities', label: 'Hanoi & Da Nang launching soon' },
-      ],
+      stats: [],
     },
     booking: {
       title: 'Night itinerary builder',
-      subtitle: 'Plan your night: warm up → bar hopping (1-3 bars)',
+      subtitle: 'Plan your night: bar hopping (1-3 bars)',
+      benefits: {
+        title: 'Exclusive Benefits When You Book With Us',
+        items: [
+          { icon: '🎁', text: 'Free entry & cover charge waived' },
+          { icon: '🍾', text: 'Welcome drink on arrival' },
+          { icon: '💺', text: 'Priority table booking' },
+          { icon: '👥', text: 'Group discounts (5+ guests)' },
+          { icon: '⭐', text: 'VIP treatment at venues' },
+        ],
+        promo: 'Limited spots available - Book now to secure your night!',
+      },
       fields: {
         name: 'Your name',
         phone: 'Phone number',
@@ -82,6 +89,8 @@ const TEXT = {
         removeBar: 'Remove',
         estimatedBudget: 'Estimated budget',
         perPerson: 'per person',
+        time: 'Time',
+        arrivalTime: 'Arrival time',
       },
     },
     citySection: {
@@ -181,15 +190,22 @@ const TEXT = {
       titleLine2: 'với hành trình đón tiếp an toàn theo gu nhạc.',
       lead:
         'Khám phá các địa điểm được kiểm duyệt tại TP. Hồ Chí Minh cùng concierge người Việt, host đa ngôn ngữ và dịch vụ di chuyển tin cậy dành cho khách quốc tế.',
-      stats: [
-        { value: '15+', label: 'Đối tác nightlife Sài Gòn' },
-        { value: '98%', label: 'Điểm an toàn từ du khách' },
-        { value: '2 thành phố', label: 'Hà Nội & Đà Nẵng sắp ra mắt' },
-      ],
+      stats: [],
     },
     booking: {
       title: 'Lịch trình buổi tối',
-      subtitle: 'Lên kế hoạch: warm up → bar hopping (1-3 bars)',
+      subtitle: 'Lên kế hoạch: bar hopping (1-3 bars)',
+      benefits: {
+        title: 'Ưu Đãi Độc Quyền Khi Đặt Qua Chúng Tôi',
+        items: [
+          { icon: '🎁', text: 'Miễn phí vào cửa & phí cover' },
+          { icon: '🍾', text: 'Đồ uống chào mừng khi đến' },
+          { icon: '💺', text: 'Ưu tiên đặt bàn' },
+          { icon: '👥', text: 'Giảm giá nhóm (5+ khách)' },
+          { icon: '⭐', text: 'Đối xử VIP tại địa điểm' },
+        ],
+        promo: 'Số lượng có hạn - Đặt ngay để giữ chỗ!',
+      },
       fields: {
         name: 'Tên của bạn',
         phone: 'Số điện thoại',
@@ -218,6 +234,8 @@ const TEXT = {
         removeBar: 'Xóa',
         estimatedBudget: 'Ngân sách ước tính',
         perPerson: 'mỗi người',
+        time: 'Thời gian',
+        arrivalTime: 'Giờ đến',
       },
     },
     citySection: {
@@ -307,154 +325,8 @@ const TEXT = {
 const NIGHTCLUB_IMAGE_LIMIT = 12
 
 const VENUES = {
-  en: [
-    {
-      id: 'skyline-lounge',
-      name: 'Skyline Pulse Terrace',
-      city: 'Ho Chi Minh City',
-      cityLabel: 'Ho Chi Minh City',
-      neighborhood: 'District 1 • Saigon Centre',
-      rating: 4.9,
-      reviewCount: 286,
-      genres: ['House', 'Nu Disco', 'City Pop'],
-      genresDisplay: ['House', 'Nu Disco', 'City Pop'],
-      vibe: 'Rooftop lounge • Skyline glass domes',
-      description:
-        'Sunset-soaked rooftop with vinyl selectors, skyline views, and bilingual hosts guiding every arrival and departure.',
-      safetyHighlights: [
-        'Night guardians escort guests curb-to-table',
-        'Verified Grab Car and limousine partners',
-        'English, Korean, and Vietnamese concierge on comms',
-      ],
-      image:
-        'https://images.unsplash.com/photo-1500043202583-4a1334b69ebc?auto=format&fit=crop&w=1200&q=80',
-      upcomingSlots: ['19:00', '20:30', '22:30'],
-      averageSpend: '950,000₫ / guest',
-      languages: ['English', 'Vietnamese', 'Korean'],
-    },
-    {
-      id: 'district-supperclub',
-      name: 'District Supperclub',
-      city: 'Ho Chi Minh City',
-      cityLabel: 'Ho Chi Minh City',
-      neighborhood: 'District 3 • Turtle Lake',
-      rating: 4.8,
-      reviewCount: 342,
-      genres: ['R&B', 'Afrobeats', 'Hip Hop'],
-      genresDisplay: ['R&B', 'Afrobeats', 'Hip Hop'],
-      vibe: 'Low-lit supperclub • Live percussion',
-      description:
-        'Hosted dinner-to-dance experience with live percussion sets, curated cocktails, and private safe-drop coordination for foreigners.',
-      safetyHighlights: [
-        'Arrival verification at hotel lobby',
-        'Dedicated female-forward guardian team',
-        'Passport-ready fast-track at venue entrance',
-      ],
-      image:
-        'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80',
-      upcomingSlots: ['19:30', '21:00', '23:00'],
-      averageSpend: '1,150,000₫ / guest',
-      languages: ['English', 'Vietnamese', 'French'],
-    },
-    {
-      id: 'afterdark-warehouse',
-      name: 'Afterdark Warehouse',
-      city: 'Ho Chi Minh City',
-      cityLabel: 'Ho Chi Minh City',
-      neighborhood: 'District 4 • Riverside Creative Hub',
-      rating: 4.7,
-      reviewCount: 198,
-      genres: ['Techno', 'Minimal', 'Industrial'],
-      genresDisplay: ['Techno', 'Minimal', 'Industrial'],
-      vibe: 'Converted warehouse • Holographic light rig',
-      description:
-        'Immersive warehouse club with certified crowd control, pre-registered entry, and silent translation devices for visiting ravers.',
-      safetyHighlights: [
-        'On-site medical & hydration lounge',
-        'Trusted night riders stationed outside',
-        'Multi-language emergency escalation protocol',
-      ],
-      image:
-        'https://images.unsplash.com/photo-1551711677-d09402bbc0f8?auto=format&fit=crop&w=1200&q=80',
-      upcomingSlots: ['21:30', '23:00', '01:00'],
-      averageSpend: '820,000₫ / guest',
-      languages: ['English', 'Vietnamese', 'Japanese'],
-    },
-  ],
-  vi: [
-    {
-      id: 'skyline-lounge',
-      name: 'Skyline Pulse Terrace',
-      city: 'Ho Chi Minh City',
-      cityLabel: 'TP. Hồ Chí Minh',
-      neighborhood: 'Quận 1 • Saigon Centre',
-      rating: 4.9,
-      reviewCount: 286,
-      genres: ['House', 'Nu Disco', 'City Pop'],
-      genresDisplay: ['House', 'Nu Disco', 'City Pop'],
-      vibe: 'Rooftop lounge • Mái vòm kính toàn cảnh',
-      description:
-        'Rooftop ngập nắng hoàng hôn với DJ vinyl, view skyline và host song ngữ đồng hành từ lúc đến cho đến khi bạn trở về.',
-      safetyHighlights: [
-        'Night guardian đưa khách từ lề đường đến bàn',
-        'Đối tác Grab & limousine đã xác minh',
-        'Concierge tiếng Anh, Hàn, Việt luôn kết nối',
-      ],
-      image:
-        'https://images.unsplash.com/photo-1500043202583-4a1334b69ebc?auto=format&fit=crop&w=1200&q=80',
-      upcomingSlots: ['19:00', '20:30', '22:30'],
-      averageSpend: '950.000₫ / khách',
-      languages: ['Tiếng Anh', 'Tiếng Việt', 'Tiếng Hàn'],
-    },
-    {
-      id: 'district-supperclub',
-      name: 'District Supperclub',
-      city: 'Ho Chi Minh City',
-      cityLabel: 'TP. Hồ Chí Minh',
-      neighborhood: 'Quận 3 • Hồ Con Rùa',
-      rating: 4.8,
-      reviewCount: 342,
-      genres: ['R&B', 'Afrobeats', 'Hip Hop'],
-      genresDisplay: ['R&B', 'Afrobeats', 'Hip Hop'],
-      vibe: 'Supperclub ánh sáng thấp • Trống live',
-      description:
-        'Trải nghiệm dinner-to-dance với bộ gõ live, cocktail tuyển chọn và đội điều phối đưa đón an toàn dành cho khách quốc tế.',
-      safetyHighlights: [
-        'Xác nhận đón tại sảnh khách sạn',
-        'Đội guardian nữ đồng hành trọn đêm',
-        'Lối vào ưu tiên chuẩn bị sẵn visa/passport',
-      ],
-      image:
-        'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80',
-      upcomingSlots: ['19:30', '21:00', '23:00'],
-      averageSpend: '1.150.000₫ / khách',
-      languages: ['Tiếng Anh', 'Tiếng Việt', 'Tiếng Pháp'],
-    },
-    {
-      id: 'afterdark-warehouse',
-      name: 'Afterdark Warehouse',
-      city: 'Ho Chi Minh City',
-      cityLabel: 'TP. Hồ Chí Minh',
-      neighborhood: 'Quận 4 • Riverside Creative Hub',
-      rating: 4.7,
-      reviewCount: 198,
-      genres: ['Techno', 'Minimal', 'Industrial'],
-      genresDisplay: ['Techno', 'Minimal', 'Industrial'],
-      vibe: 'Warehouse chuyển đổi • Hệ ánh sáng hologram',
-      description:
-        'Warehouse immersive với kiểm soát đám đông chuẩn, check-in trước và thiết bị phiên dịch dành cho raver quốc tế.',
-      safetyHighlights: [
-        'Khu y tế & tiếp nước ngay trong venue',
-        'Đội night riders trực chờ bên ngoài',
-        'Quy trình khẩn cấp đa ngôn ngữ',
-      ],
-      image:
-        'https://images.unsplash.com/photo-1551711677-d09402bbc0f8?auto=format&fit=crop&w=1200&q=80',
-      upcomingSlots: ['21:30', '23:00', '01:00'],
-      averageSpend: '820.000₫ / khách',
-      languages: ['Tiếng Anh', 'Tiếng Việt', 'Tiếng Nhật'],
-    },
-  ],
+  en: [],
+  vi: [],
 }
 
 const groupSizeOptions = [1, 2, 3, 4, 5, 6, 8, 10]
@@ -467,9 +339,9 @@ function App() {
   const [date, setDate] = useState(() => new Date().toISOString().split('T')[0])
   const [groupSize, setGroupSize] = useState(2)
   const [selectedSlot, setSelectedSlot] = useState(null)
-  const [selectedVenueId, setSelectedVenueId] = useState(VENUES.en[0].id)
-  const [warmUpVenue, setWarmUpVenue] = useState(null)
+  const [selectedVenueId, setSelectedVenueId] = useState(null)
   const [selectedBars, setSelectedBars] = useState([])
+  const [barTimes, setBarTimes] = useState({}) // Store time for each bar: { venueId: '20:00' }
   const [budget, setBudget] = useState(1000000)
   const [customerName, setCustomerName] = useState('')
   const [phoneCountryCode, setPhoneCountryCode] = useState('+84')
@@ -543,7 +415,7 @@ function App() {
   }, [allVenues, selectedCity, selectedMusic])
 
   const selectedVenue = useMemo(() => {
-    return allVenues.find((venue) => venue.id === selectedVenueId) ?? allVenues[0]
+    return allVenues.find((venue) => venue.id === selectedVenueId) ?? (allVenues.length > 0 ? allVenues[0] : null)
   }, [allVenues, selectedVenueId])
 
   const selectedNightclub = useMemo(() => {
@@ -605,6 +477,15 @@ function App() {
     }
   }, [])
 
+  // Scroll to success section when booking is confirmed
+  useEffect(() => {
+    if (showSuccess && successSectionRef.current) {
+      setTimeout(() => {
+        successSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }, 100)
+    }
+  }, [showSuccess])
+
   const handleSlotSelect = (venueId, slot) => {
     setSelectedVenueId(venueId)
     setSelectedSlot(slot)
@@ -612,6 +493,7 @@ function App() {
 
   // Throttle navigation để tránh lag khi click nhanh
   const navigationTimeoutRef = useRef(null)
+  const successSectionRef = useRef(null)
 
   const handleNightclubPrev = useCallback(() => {
     if (navigationTimeoutRef.current) return
@@ -664,6 +546,101 @@ function App() {
     setLanguage(newLang)
   }, [])
 
+  // Function to send itinerary to Google Sheets
+  const sendItineraryToGoogleSheets = useCallback(async () => {
+    // Replace this URL with your Google Apps Script Web App URL
+    // To get this URL:
+    // 1. Create a Google Apps Script project
+    // 2. Deploy it as a web app
+    // 3. Copy the web app URL here
+    const GOOGLE_SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL || ''
+    
+    if (!GOOGLE_SCRIPT_URL) {
+      console.warn('Google Sheets URL not configured')
+      return
+    }
+
+    // Format the date
+    const formattedDate = new Date(date).toLocaleDateString(undefined, {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    })
+
+    // Get selected bars/clubs with their details
+    const selectedBarsData = selectedBars
+      .filter((id) => id)
+      .map((barId, index) => {
+        const venue = allVenues.find((v) => v.id === barId)
+        const arrivalTime = barTimes[barId] || '20:00'
+        return {
+          order: index + 1,
+          name: venue?.name || `Bar ${index + 1}`,
+          arrivalTime: arrivalTime,
+        }
+      })
+
+    // Clean phone number - remove spaces and special characters except + and digits
+    const cleanPhoneNumber = phoneNumber.replace(/[\s\-\(\)\.]/g, '').trim()
+    const cleanCountryCode = phoneCountryCode.trim()
+    
+    // Format full phone number
+    const fullPhone = cleanPhoneNumber 
+      ? `${cleanCountryCode}${cleanPhoneNumber}`.replace(/\s+/g, '')
+      : `${cleanCountryCode} ${phoneNumber}`.trim()
+
+    // Prepare data to send
+    const bookingData = {
+      timestamp: new Date().toISOString(),
+      customerName: customerName.trim(),
+      phoneCountryCode: cleanCountryCode,
+      phoneNumber: cleanPhoneNumber,
+      fullPhone: fullPhone,
+      city: selectedCity,
+      date: formattedDate,
+      rawDate: date,
+      groupSize: groupSize,
+      musicFocus: selectedMusic !== 'all' 
+        ? (MUSIC_FILTERS.find(f => f.value === selectedMusic)?.label[language] || selectedMusic)
+        : 'All styles',
+      selectedBars: selectedBarsData,
+      barsCount: selectedBars.length,
+      barsList: selectedBarsData.map(bar => `${bar.name} (${bar.arrivalTime})`).join(', '),
+      language: language,
+    }
+
+    try {
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors', // Google Apps Script requires no-cors for public web apps
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(bookingData),
+      })
+      
+      // Note: With no-cors mode, we can't read the response
+      // But the data should still be sent to Google Sheets
+      console.log('Booking data sent to Google Sheets:', bookingData)
+    } catch (error) {
+      console.error('Error sending data to Google Sheets:', error)
+      // Don't show error to user - fail silently
+    }
+  }, [
+    customerName,
+    phoneCountryCode,
+    phoneNumber,
+    date,
+    groupSize,
+    selectedMusic,
+    selectedBars,
+    barTimes,
+    selectedCity,
+    allVenues,
+    language,
+  ])
+
   // Function to send itinerary to WhatsApp
   const sendItineraryToWhatsApp = useCallback(() => {
     const whatsappNumber = '84978270038' // Your WhatsApp number
@@ -700,14 +677,13 @@ function App() {
       message += `🎵 Music Focus: ${musicLabel}\n`
     }
     
-    if (warmUpVenue) {
-      message += `🍺 Warm Up: ${copy.booking.warmUpOptions[warmUpVenue]}\n`
-    }
-    
     if (selectedBarsNames.length > 0) {
       message += `\n*Selected Venues:*\n`
-      selectedBarsNames.forEach((name, index) => {
-        message += `${index + 1}. ${name}\n`
+      selectedBars.forEach((barId, index) => {
+        const venue = allVenues.find((v) => v.id === barId)
+        const venueName = venue?.name || selectedBarsNames[index] || `Bar ${index + 1}`
+        const arrivalTime = barTimes[barId] || '20:00'
+        message += `${index + 1}. ${venueName} - ${copy.booking.itinerary.arrivalTime}: ${arrivalTime}\n`
       })
     }
     
@@ -777,8 +753,8 @@ function App() {
     date,
     groupSize,
     selectedMusic,
-    warmUpVenue,
     selectedBars,
+    barTimes,
     budget,
     allVenues,
     copy,
@@ -1041,8 +1017,8 @@ function App() {
             <h2>{language === 'en' ? 'Our Mission' : 'Sứ mệnh của chúng tôi'}</h2>
             <p>
               {language === 'en'
-                ? 'Nightlife Atlas is dedicated to providing travelers with safe, curated nightlife experiences across Vietnam. We partner with verified venues, provide bilingual hosts, and ensure every guest returns safely to their accommodation.'
-                : 'Nightlife Atlas cam kết mang đến cho du khách trải nghiệm nightlife an toàn và tuyển chọn trên khắp Việt Nam. Chúng tôi hợp tác với các địa điểm đã xác minh, cung cấp host song ngữ và đảm bảo mọi khách trở về nơi ở an toàn.'}
+                ? 'Nightlife Atlas is dedicated to providing travelers with curated nightlife experiences across Vietnam. We partner with top venues and provide bilingual hosts to enhance your night out.'
+                : 'Nightlife Atlas cam kết mang đến cho du khách trải nghiệm nightlife tuyển chọn trên khắp Việt Nam. Chúng tôi hợp tác với các địa điểm hàng đầu và cung cấp host song ngữ để nâng cao trải nghiệm đêm của bạn.'}
             </p>
           </div>
 
@@ -1052,44 +1028,11 @@ function App() {
               <div className="about-feature">
                 <div className="about-feature__icon">✓</div>
                 <div>
-                  <h3>{language === 'en' ? 'Verified Venues' : 'Địa điểm đã xác minh'}</h3>
-                  <p>
-                    {language === 'en'
-                      ? 'All venues are regularly audited for safety, crowd control, and service quality.'
-                      : 'Tất cả địa điểm được kiểm tra thường xuyên về an toàn, kiểm soát đám đông và chất lượng dịch vụ.'}
-                  </p>
-                </div>
-              </div>
-              <div className="about-feature">
-                <div className="about-feature__icon">✓</div>
-                <div>
                   <h3>{language === 'en' ? 'Bilingual Hosts' : 'Host song ngữ'}</h3>
                   <p>
                     {language === 'en'
                       ? 'Trained hosts speak multiple languages and stay with you throughout your night.'
                       : 'Host được đào tạo nói nhiều ngôn ngữ và đồng hành với bạn suốt đêm.'}
-                  </p>
-                </div>
-              </div>
-              <div className="about-feature">
-                <div className="about-feature__icon">✓</div>
-                <div>
-                  <h3>{language === 'en' ? 'Safe Transport' : 'Di chuyển an toàn'}</h3>
-                  <p>
-                    {language === 'en'
-                      ? 'Verified drivers and pre-arranged transport ensure you get home safely.'
-                      : 'Tài xế đã xác minh và phương tiện được sắp xếp trước đảm bảo bạn về nhà an toàn.'}
-                  </p>
-                </div>
-              </div>
-              <div className="about-feature">
-                <div className="about-feature__icon">✓</div>
-                <div>
-                  <h3>{language === 'en' ? '24/7 Support' : 'Hỗ trợ 24/7'}</h3>
-                  <p>
-                    {language === 'en'
-                      ? 'Round-the-clock concierge support for any questions or emergencies.'
-                      : 'Hỗ trợ concierge 24/7 cho mọi câu hỏi hoặc tình huống khẩn cấp.'}
                   </p>
                 </div>
               </div>
@@ -1326,33 +1269,27 @@ function App() {
               </a>
             </div>
 
-            <div className="stat-row">
-              {copy.hero.stats.map((stat) => (
-                <div key={stat.label} className="stat-item">
-                  <strong>{stat.value}</strong>
-                  <span>{stat.label}</span>
-                </div>
-              ))}
-            </div>
 
-            <div className="hero-features">
-              <div className="hero-feature">
-                <div className="hero-feature__icon">✓</div>
-                <span>{language === 'en' ? 'Verified venues' : 'Địa điểm đã xác minh'}</span>
-              </div>
-              <div className="hero-feature">
-                <div className="hero-feature__icon">✓</div>
-                <span>{language === 'en' ? '24/7 Support' : 'Hỗ trợ 24/7'}</span>
-              </div>
-              <div className="hero-feature">
-                <div className="hero-feature__icon">✓</div>
-                <span>{language === 'en' ? 'Safe transport' : 'Di chuyển an toàn'}</span>
-              </div>
-            </div>
           </div>
         </section>
 
         <section className="booking-section">
+          {/* Benefits Section */}
+          <div className="booking-benefits">
+            <div className="booking-benefits__header">
+              <h3>{copy.booking.benefits.title}</h3>
+              <p className="booking-benefits__promo">{copy.booking.benefits.promo}</p>
+            </div>
+            <div className="booking-benefits__grid">
+              {copy.booking.benefits.items.map((benefit, index) => (
+                <div key={index} className="booking-benefits__item">
+                  <span className="booking-benefits__icon">{benefit.icon}</span>
+                  <span className="booking-benefits__text">{benefit.text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className="booking-card">
             <div className="booking-card__header">
               <h2>{copy.booking.title}</h2>
@@ -1508,8 +1445,19 @@ function App() {
                             onClick={() => {
                               if (selectedBars.includes(venue.id)) {
                                 setSelectedBars(selectedBars.filter((id) => id !== venue.id))
+                                // Remove time when bar is removed
+                                setBarTimes((prev) => {
+                                  const newTimes = { ...prev }
+                                  delete newTimes[venue.id]
+                                  return newTimes
+                                })
                               } else if (selectedBars.length < 3) {
                                 setSelectedBars([...selectedBars, venue.id])
+                                // Set default time when bar is added
+                                setBarTimes((prev) => ({
+                                  ...prev,
+                                  [venue.id]: '20:00',
+                                }))
                               }
                             }}
                           >
@@ -1543,8 +1491,19 @@ function App() {
                                 e.stopPropagation()
                                 if (selectedBars.includes(venue.id)) {
                                   setSelectedBars(selectedBars.filter((id) => id !== venue.id))
+                                  // Remove time when bar is removed
+                                  setBarTimes((prev) => {
+                                    const newTimes = { ...prev }
+                                    delete newTimes[venue.id]
+                                    return newTimes
+                                  })
                                 } else if (selectedBars.length < 3) {
                                   setSelectedBars([...selectedBars, venue.id])
+                                  // Set default time when bar is added
+                                  setBarTimes((prev) => ({
+                                    ...prev,
+                                    [venue.id]: '20:00',
+                                  }))
                                 }
                               }}
                               disabled={selectedBars.length >= 3 && !selectedBars.includes(venue.id)}
@@ -1571,21 +1530,62 @@ function App() {
                   {language === 'en' ? 'Your Itinerary' : 'Lịch trình của bạn'}
                 </h3>
                 <div className="booking-card__section-content">
-                  <div className="booking-card__warmup">
-                    <label className="booking-card__warmup-label">{copy.booking.fields.warmUp}</label>
-                    <div className="booking-card__warmup-options">
-                      {Object.entries(copy.booking.warmUpOptions).map(([key, label]) => (
-                        <button
-                          key={key}
-                          type="button"
-                          className={warmUpVenue === key ? 'warmup-chip warmup-chip--active' : 'warmup-chip'}
-                          onClick={() => setWarmUpVenue(warmUpVenue === key ? null : key)}
-                        >
-                          {label}
-                        </button>
-                      ))}
+                  {/* Selected Bars in Itinerary */}
+                  {selectedBars.length > 0 && (
+                    <div className="booking-card__itinerary-bars">
+                      <label className="booking-card__itinerary-label">
+                        {copy.booking.itinerary.step2}
+                      </label>
+                      <div className="booking-card__itinerary-list">
+                        {selectedBars.map((barId, index) => {
+                          const venue = allVenues.find((v) => v.id === barId)
+                          if (!venue) return null
+                          return (
+                            <div key={barId} className="booking-card__itinerary-item">
+                              <div className="booking-card__itinerary-item-content">
+                                <div className="booking-card__itinerary-item-number">{index + 1}</div>
+                                <div className="booking-card__itinerary-item-info">
+                                  <h4>{venue.name}</h4>
+                                  <p className="booking-card__itinerary-item-vibe">{venue.vibe}</p>
+                                </div>
+                              </div>
+                              <div className="booking-card__itinerary-item-time">
+                                <label className="booking-card__itinerary-time-label">
+                                  {copy.booking.itinerary.arrivalTime}
+                                </label>
+                                <input
+                                  type="time"
+                                  value={barTimes[barId] || '20:00'}
+                                  onChange={(e) => {
+                                    setBarTimes((prev) => ({
+                                      ...prev,
+                                      [barId]: e.target.value,
+                                    }))
+                                  }}
+                                  className="booking-card__itinerary-time-input"
+                                />
+                              </div>
+                              <button
+                                type="button"
+                                className="booking-card__itinerary-remove"
+                                onClick={() => {
+                                  setSelectedBars(selectedBars.filter((id) => id !== barId))
+                                  setBarTimes((prev) => {
+                                    const newTimes = { ...prev }
+                                    delete newTimes[barId]
+                                    return newTimes
+                                  })
+                                }}
+                                aria-label={copy.booking.itinerary.removeBar}
+                              >
+                                ×
+                              </button>
+                            </div>
+                          )
+                        })}
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               </div>
 
@@ -1595,8 +1595,10 @@ function App() {
               <button
                 className="primary"
                 type="button"
-                onClick={() => {
+                onClick={async () => {
                   if (customerName.trim() && phoneNumber.trim()) {
+                    // Send itinerary to Google Sheets
+                    await sendItineraryToGoogleSheets()
                     // Send itinerary to WhatsApp behind the scenes
                     sendItineraryToWhatsApp()
                     // Show success page
@@ -1838,11 +1840,10 @@ function App() {
         {currentPage === 'bars-clubs' && <BarsClubsPage />}
         {currentPage === 'restaurants' && <RestaurantsPage />}
         {currentPage === 'about' && <AboutPage />}
-      </main>
 
-      {showSuccess && (
-        <div className="success-overlay">
-          <div className="success-page">
+        {showSuccess && (
+          <section ref={successSectionRef} className="success-section">
+            <div className="success-page">
             <div className="success-page__header">
               <div className="success-page__icon">✓</div>
               <h2>{copy.success.title}</h2>
@@ -1896,16 +1897,6 @@ function App() {
                   </div>
                 </div>
 
-                {warmUpVenue && (
-                  <div className="success-page__summary-card">
-                    <div className="success-page__summary-icon">🍺</div>
-                    <div className="success-page__summary-content">
-                      <div className="success-page__summary-label">{copy.booking.fields.warmUp}</div>
-                      <div className="success-page__summary-value">{copy.booking.warmUpOptions[warmUpVenue]}</div>
-                    </div>
-                  </div>
-                )}
-
                 {selectedBars.length > 0 && (
                   <div className="success-page__summary-card success-page__summary-card--bars">
                     <div className="success-page__summary-icon">🎵</div>
@@ -1947,8 +1938,9 @@ function App() {
               </a>
             </div>
           </div>
-        </div>
-      )}
+          </section>
+        )}
+      </main>
 
       {selectedSlot && (
         <aside className="booking-drawer">

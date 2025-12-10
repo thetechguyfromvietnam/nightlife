@@ -1,0 +1,83 @@
+HƯỚNG DẪN DEBUG - GOOGLE SHEETS KHÔNG NHẬN DỮ LIỆU
+=====================================================
+
+CÁC BƯỚC KIỂM TRA:
+
+1. KIỂM TRA SPREADSHEET_ID TRONG GOOGLE APPS SCRIPT
+---------------------------------------------------
+- Mở Google Apps Script (Extensions > Apps Script trong Google Sheet)
+- Kiểm tra dòng: const SPREADSHEET_ID = '...'
+- SPREADSHEET_ID phải là phần giữa /d/ và /edit trong URL Google Sheet
+- Ví dụ: https://docs.google.com/spreadsheets/d/ABC123XYZ/edit
+  => SPREADSHEET_ID = 'ABC123XYZ'
+
+2. KIỂM TRA TÊN SHEET
+--------------------
+- Trong Google Apps Script, kiểm tra: const SHEET_NAME = 'Data Khách Hàng Booking Bar'
+- Tên sheet phải KHỚP CHÍNH XÁC với tên tab trong Google Sheet (kể cả khoảng trắng, chữ hoa/thường)
+- Nếu tên sheet trong Google Sheet khác, sửa lại trong Google Apps Script
+
+3. KIỂM TRA QUYỀN TRUY CẬP
+--------------------------
+- Vào Deploy > Manage deployments
+- Click biểu tượng bút chì để edit
+- Đảm bảo "Who has access" là "Anyone"
+- Nếu đã thay đổi, cần Deploy lại
+
+4. KIỂM TRA CONSOLE TRONG BROWSER
+---------------------------------
+- Mở website
+- Nhấn F12 để mở Developer Tools
+- Vào tab Console
+- Điền form và nhấn "Build Itinerary"
+- Xem có log "Booking data sent to Google Sheets:" không
+- Xem có lỗi màu đỏ nào không
+
+5. TEST GOOGLE APPS SCRIPT TRỰC TIẾP
+------------------------------------
+- Mở URL: https://script.google.com/macros/s/AKfycbwrZ7cVfCcVfKb0xuXYMQ9LirrxaKlBSxhv9fOEYnS56wM8Ic8bpzV8oKYJsThwBAq8kw/exec
+- Nếu thấy {"success":true,"message":"Google Apps Script is working!"} => Script hoạt động
+- Nếu thấy lỗi => Kiểm tra lại code trong Google Apps Script
+
+6. KIỂM TRA EXECUTION LOG TRONG GOOGLE APPS SCRIPT
+--------------------------------------------------
+- Vào Google Apps Script
+- Click "Executions" ở menu bên trái
+- Xem các lần chạy gần đây
+- Nếu có lỗi, click vào để xem chi tiết
+
+7. KIỂM TRA FILE .ENV
+---------------------
+- Đảm bảo file .env có dòng:
+  VITE_GOOGLE_SCRIPT_URL=https://script.google.com/macros/s/AKfycbwrZ7cVfCcVfKb0xuXYMQ9LirrxaKlBSxhv9fOEYnS56wM8Ic8bpzV8oKYJsThwBAq8kw/exec
+- Đã khởi động lại dev server sau khi tạo/sửa file .env
+
+CÁC LỖI THƯỜNG GẶP:
+==================
+
+Lỗi: "SPREADSHEET_ID chưa được cấu hình"
+- Giải pháp: Thay 'YOUR_SPREADSHEET_ID_HERE' bằng Spreadsheet ID thực tế
+
+Lỗi: "Không thể mở Google Sheet"
+- Giải pháp: Kiểm tra Spreadsheet ID có đúng không
+- Đảm bảo Google Sheet không bị xóa hoặc thay đổi quyền truy cập
+
+Lỗi: "Không thể tạo sheet mới"
+- Giải pháp: Kiểm tra quyền của Google Apps Script
+- Đảm bảo đã authorize đầy đủ khi deploy
+
+Dữ liệu không xuất hiện nhưng không có lỗi
+- Kiểm tra tên sheet có khớp chính xác không
+- Kiểm tra sheet có bị ẩn không
+- Thử tạo sheet mới với tên "Data Khách Hàng Booking Bar"
+
+CÁCH TEST NHANH:
+================
+1. Mở Google Sheet
+2. Tạo sheet tab mới với tên: "Data Khách Hàng Booking Bar"
+3. Trong Google Apps Script, đảm bảo:
+   - SPREADSHEET_ID đúng
+   - SHEET_NAME = 'Data Khách Hàng Booking Bar'
+4. Deploy lại (Deploy > Manage deployments > Edit > Deploy)
+5. Test lại trên website
+
