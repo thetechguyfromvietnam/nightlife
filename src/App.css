@@ -1196,7 +1196,9 @@
 
 select,
 input[type='date'],
-input[type='text'] {
+input[type='text'],
+input[type='tel'],
+input[type='date'] {
   width: 100%;
   border-radius: 14px;
   border: 1px solid rgba(112, 112, 140, 0.35);
@@ -1208,6 +1210,9 @@ input[type='text'] {
   cursor: pointer;
   box-shadow: inset 0 0 0 1px rgba(108, 92, 231, 0.1);
   backdrop-filter: blur(8px);
+  font-size: 16px; /* Ngăn auto-zoom trên iOS Safari */
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 select:hover,
@@ -2911,6 +2916,26 @@ input[type='tel']::placeholder {
     flex: 1 1 auto;
     max-width: 100%;
     width: 100%;
+  }
+
+  /* Ngăn page bị mở rộng khi focus input trên mobile */
+  input[type='text'],
+  input[type='tel'],
+  input[type='date'],
+  select {
+    font-size: 16px !important; /* Đảm bảo không bị zoom trên iOS */
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Cải thiện UX khi keyboard xuất hiện */
+  .booking-section {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .booking-card {
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   .booking-card__itinerary-item {
